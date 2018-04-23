@@ -1,0 +1,189 @@
+.pricing-row{
+	@include radial-bg ;
+	.content-padding {
+		position: relative;
+
+
+		.triangle{
+			position: absolute;
+			top: -100px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			max-width: 950px;
+			height: 0;
+			width: 0;
+			border-bottom: 100px solid rgb(193, 217, 145);
+			border-right: 50px solid transparent;
+			border-left: 50px solid transparent;
+
+		}
+		.half-circle1 {
+			position: absolute;
+			background: #b6d289;
+			border-radius:  0 0 100% 100%;
+			bottom: -42px;
+			right: 0;
+			left: 145px;
+			margin: 0 auto;
+			max-width: 950px;
+			height: 100px;
+			width: 177px;
+
+		}
+		
+	}
+
+	.navigation {
+		ul {
+			@include clearfix;
+			// @include listreset;
+			padding-left: 10px;
+
+			li {
+				@include reset-lists;
+				padding-right: 10px;
+				margin: 20px 0;
+
+				a {
+					color: $header-footer-color;
+				&:hover{
+					color:$secondary-color; 
+				}
+				}
+			}
+		}
+	}
+
+	.sales-colums {
+		@include clearfix;
+
+		.two-colums {
+
+			@include reset-lists;
+			width: 49%;
+
+		}
+
+		.two-images {
+				@include clearfix;
+
+			.inner {
+				float: left;
+				width: 50%;
+				// background:#fff;
+				position: relative;
+
+				img {
+					padding: 10px;
+				}
+			}
+		}
+
+		.bigger-image {
+			padding: 10px;
+
+			.inner {
+				position: relative;
+			}
+
+			.price-cut {
+				text-decoration: line-through;
+				padding-right: 10px;
+			}
+		}
+
+		.price {
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				color: red;
+			}
+	}
+
+	.stuff-info {
+		@include shadow-text(absolute, 0 ,0, -20px, $default-color);
+		padding: 5px 40px;
+		transition: all .4s linear;
+		transform:scale(0);
+		display: inline-block;
+		@include box-shadow;
+		@include linear-gradient(hotpink, tomato);
+
+		.social-networks {
+
+			ul {
+				@include clearfix;
+				// @include listreset;
+
+				li {
+					@include reset-lists;
+
+					a {
+						@include reset-lists;
+						padding: 5px;						
+						background: $header-footer-color;
+						height: 30px;
+						width: 30px;
+						border-radius: 100%;
+						color: $default-color;
+						text-align: center;
+
+						&:hover {
+							background:$secondary-color; 
+						}
+					}
+				}
+			}
+		}
+
+		&:hover {
+			h4,p,i {
+				color: #fff;
+			}
+		}
+	}
+
+	.inner:hover .stuff-info{
+		transform:scale(1);
+	}
+}
+
+
+@media screen and (max-width: 640px){
+	.navigation a {
+		font-size: 15px;
+	}
+
+	.price {
+			top: 10px;
+		}
+
+	.stuff-info {
+		top: 70px;
+		// right: 20px;
+		// bottom: 20px;
+		// left: 20px;
+	}
+	h4,p,i{
+		font-size: 8px;
+		color: $default-color;
+	}
+	.social-networks a {
+		padding: none;
+		height: 20px;
+		width: 20px;
+	}
+}
+
+@media screen and (max-width:480px){
+
+	.navigation li{
+		display: block;
+	}
+	.navigation a{
+		font-size: 10px;
+	}
+
+
+}

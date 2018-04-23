@@ -1,0 +1,76 @@
+.header-outer {
+	background:$header-footer-color;
+
+	.container {
+		max-width: 1170px;
+	}
+
+	.form {
+		@include clearfix;
+	}
+	.currency-wrap {
+		float: left;
+		max-width: 200px;
+		padding-top: 10px;
+		color: darken($default-color, 50%);
+		@include clearfix;
+
+		label {
+			float: left;
+			padding-right: 10px;
+		}
+
+		#select {
+			
+			appearance: none;
+			border: 0;
+			background: none;
+			color: darken($default-color, 50%);
+		}		
+	}
+
+	.custom-select {
+		position: relative;
+		padding-right: 10px;
+		float: right;
+
+		&:after {
+			content: '>';
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: rotate(90deg);
+		}
+	}
+
+	.links {
+		float: right;
+		max-width: calc(100% - 200px);
+
+		li {
+			@include reset-lists;
+		}
+
+		a {
+			color: $default-color;
+		
+		&:hover {
+			color:deeppink; 
+		}	
+		}
+
+		.blue-bg {
+			background:$secondary-color;
+			padding: 10px;
+		}
+		
+		.top-pad {
+			padding-top: 10px;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+
+		padding: 0 20px;
+	}
+}

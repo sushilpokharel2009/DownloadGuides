@@ -1,0 +1,102 @@
+.features-block {
+	 @include linear-gradient(hotpink, tomato);
+	padding: 60px 0;
+
+	.three-colums {
+		@include clearfix;
+	}
+
+	.colums	{
+		width: 33%;
+		@include reset-lists;
+		padding: 0 10px;
+
+			
+		.inner {
+			background: $primary-color;
+			@include clearfix;
+		}
+
+		.image-wrap {
+			float: left;
+			width: 50%;
+			@include reset-lists;
+		}
+
+		.text-wrap {
+			float: right;
+			padding: 15px;
+			width: 50%;
+
+			h1,h2,p {
+				margin-bottom: 10px;
+				line-height: 25px;
+			}
+			// h2 {
+			// 	@include header-size('Montserrat', 400, 10px);
+			// }
+			// h2 {
+			// 	font-size: 20px;
+			// }
+		}
+		
+	}
+	.view-btn {
+			margin-top: 40px;
+			text-align: center;
+			transition: all .4s linear;
+			@include button-outline(1px solid #000, 10px, $default-color) ;
+
+		&:hover {
+			background:#00ff00;
+			color: #fff;
+		}
+	}
+
+	@media screen and (max-width: 992px){
+		h1 {
+			font-size: 20px;
+		}
+
+		h2 {
+			font-size: 15px;
+		}
+
+		.view-btn {
+			margin-top: 10px;
+		}
+	}
+
+	@media screen and (max-width: 768px){
+		.colums {
+			display: block;
+			width: auto;
+		}
+
+		.colums:not(:first-child){
+				margin-top: 20px;
+				// ?????
+			}
+
+		.features-block{
+			padding: 10px 0;
+			// ??????
+		}
+
+		.text-wrap {
+			margin-top: 70px;
+			padding: none;
+		}
+
+		.view-btn {
+			max-width: 230px;
+			display: inline-block;
+		}
+	}
+
+	@media screen and (max-width: 480px){
+		p {
+			font-size: 15px;
+		}
+	}
+}

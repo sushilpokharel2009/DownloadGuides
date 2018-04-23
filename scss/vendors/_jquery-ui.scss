@@ -1,0 +1,22 @@
+ul {
+	@include listreset;
+}
+
+.burger-menu-holder {
+	display: none;
+}
+
+@media screen and (max-width: 767px){
+	.sub-menu {
+		max-height: 0;
+		overflow:hidden;
+		transition: all .4s linear;
+	}
+	.burger-menu-holder {
+		display: block;
+	}
+
+	.menu-holder.show .sub-menu{
+		max-height: 500px;
+	}
+}
